@@ -1,0 +1,15 @@
+extends ./layout.pug
+
+block content
+    .message
+      if message
+        p= message
+    form(name="", action="/login", method="post")
+        div.input
+            label Email
+            input(type="text", name="email")
+        div.input
+            label Password
+            input(type="password", name="password")
+        div.actions
+            input(type="submit", value="Submit")
